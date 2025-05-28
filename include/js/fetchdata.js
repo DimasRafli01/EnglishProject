@@ -1,11 +1,9 @@
-// EnglishWeb/include/js/fetchdata.js
-
 document.addEventListener('DOMContentLoaded', async () => {
     const vocabularyTableBody = document.querySelector('#vocabularyTable tbody');
-    const paginationControls = document.getElementById('paginationControls'); // Elemen untuk kontrol pagination
+    const paginationControls = document.getElementById('paginationControls');
 
     const ITEMS_PER_PAGE = 5;
-    const MAX_PAGES_DISPLAYED = 5; // Maksimal nomor halaman yang ditampilkan sekaligus (termasuk titik-titik)
+    const MAX_PAGES_DISPLAYED = 5;
     let currentPage = 1;
     let allVocabularyData = [];
 
@@ -14,7 +12,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         return;
     }
 
-    // Fungsi untuk menampilkan data kosakata pada halaman tertentu
     function displayVocabulary(page) {
         vocabularyTableBody.innerHTML = '';
 
@@ -23,12 +20,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         const paginatedData = allVocabularyData.slice(startIndex, endIndex);
 
         if (paginatedData.length === 0 && allVocabularyData.length > 0) {
-            currentPage--; // Kembali ke halaman sebelumnya jika halaman ini kosong
+            currentPage--;
             displayVocabulary(currentPage);
             return;
         } else if (paginatedData.length === 0 && allVocabularyData.length === 0) {
             vocabularyTableBody.innerHTML = `<tr><td colspan="3" style="text-align: center;">Tidak ada kosakata yang tersedia.</td></tr>`;
-            renderPaginationControls(); // Tetap render untuk menonaktifkan tombol
+            renderPaginationControls();
             return;
         }
 
@@ -42,15 +39,14 @@ document.addEventListener('DOMContentLoaded', async () => {
             vocabularyTableBody.appendChild(row);
         });
 
-        renderPaginationControls(); // Perbarui kontrol pagination
+        renderPaginationControls();
     }
 
     // Fungsi untuk membuat dan merender tombol-tombol pagination
     function renderPaginationControls() {
-        paginationControls.innerHTML = ''; // Kosongkan kontrol yang ada
+        paginationControls.innerHTML = '';
         const totalPages = Math.ceil(allVocabularyData.length / ITEMS_PER_PAGE);
-
-        // Tombol 'Previous'
+       
         const prevBtn = document.createElement('button');
         prevBtn.id = 'prevPageBtn';
         prevBtn.textContent = 'Previous';
@@ -63,7 +59,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
         paginationControls.appendChild(prevBtn);
 
-        // Logika untuk menampilkan nomor halaman (1 2 3 ... Next)
         let startPage = Math.max(1, currentPage - Math.floor(MAX_PAGES_DISPLAYED / 2));
         let endPage = Math.min(totalPages, startPage + MAX_PAGES_DISPLAYED - 1);
 
@@ -94,7 +89,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             pageBtn.textContent = i;
             if (i === currentPage) {
                 pageBtn.classList.add('active');
-                pageBtn.disabled = true; // Nonaktifkan tombol halaman aktif
+                pageBtn.disabled = true;
             }
             pageBtn.addEventListener('click', () => {
                 currentPage = i;
@@ -120,7 +115,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             paginationControls.appendChild(lastPageBtn);
         }
 
-        // Tombol 'Next'
         const nextBtn = document.createElement('button');
         nextBtn.id = 'nextPageBtn';
         nextBtn.textContent = 'Next';
@@ -134,7 +128,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         paginationControls.appendChild(nextBtn);
     }
 
-    // --- Logika untuk memuat data saat halaman pertama kali dimuat ---
     try {
         const response = await fetch('include/data/vocabulary.json');
         if (!response.ok) {
@@ -146,10 +139,10 @@ document.addEventListener('DOMContentLoaded', async () => {
              vocabularyTableBody.innerHTML = `<tr><td colspan="3" style="text-align: center;">Tidak ada kosakata yang tersedia.</td></tr>`;
         }
 
-        displayVocabulary(currentPage); // Tampilkan halaman pertama
+        displayVocabulary(currentPage);
     } catch (error) {
         console.error('Error loading vocabulary:', error);
         vocabularyTableBody.innerHTML = `<tr><td colspan="3" style="text-align: center; color: red;">Gagal memuat kosakata. Silakan coba lagi nanti.</td></tr>`;
-        renderPaginationControls(); // Pastikan tombol dinonaktifkan jika ada error
+        renderPaginationControls();
     }
 });
