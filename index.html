@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English Explorer: Master English Easily!</title>
+    <title>English Explorer</title>
     <link rel="stylesheet" href="include/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,12 +12,18 @@
 <body>
 
     <header class="main-header">
-        <a href="index.php" class="logo">
-            <img src="include/img/logo.png" alt="English Learning Logo"> English Learning
+        <a href="#" class="logo">
+            <img src="include/img/logo.png" alt="English Learning Logo"> English Explorer
         </a>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="index.php">Home</a></li>
+        
+        <div class="hamburger-menu" id="hamburgerMenu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <nav class="main-nav" id="mainNav"> <ul>
+                <li><a href="#">Home</a></li>
                 <li><a href="#vocabulary-section">Vocabulary</a></li>
                 <li><a href="#grammar">Grammar</a></li>
                 <li><a href="#about-us">About Us</a></li>
@@ -29,19 +35,6 @@
         <div class="hero-content">
             <h1>Start Learning Now</h1>
             <a href="quiz.html" class="btn-signup">START QUIZ</a>
-        </div>
-    </section>
-
-    <section class="features-section">
-        <div class="features-text">
-            <ul>
-                <li>Improve communication skills</li>
-                <li>Boost career prospects</li>
-                <li>Experience a richer understanding of different cultures</li>
-            </ul>
-        </div>
-        <div class="features-image">
-            <img src="https://via.placeholder.com/600x400/eeeeee/333333?text=Engaging+Visuals" alt="Engaging Visuals">
         </div>
     </section>
 
@@ -67,7 +60,9 @@
     </section>
 
     <section class="section" id="grammar">
-        <h2 style="text-align: center;">Master English Grammar</h2> <p style="text-align: center;">Understand sentence structures and grammar rules with ease.</p> <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 50px;">
+        <h2 style="text-align: center;">Master English Grammar</h2>
+        <p style="text-align: center;">Understand sentence structures and grammar rules with ease.</p>
+        <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 50px;">
             <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); max-width: 350px; text-align: left;">
                 <h3>Simple Present Tense</h3>
                 <p>Used for habits, general facts, or schedules.</p>
@@ -89,7 +84,7 @@
             </div>
         </div>
 
-        <center><h3 style="margin-top: 60px; margin-bottom: 20px; color: #007bff;">Personal Pronouns</h3>
+        <h3 style="margin-top: 60px; margin-bottom: 20px; color: #007bff;">Personal Pronouns</h3>
         <div class="pronoun-table-container">
             <table class="pronoun-table">
                 <thead>
@@ -152,6 +147,16 @@
     <section class="section" id="about-us">
         <h2>About Us</h2>
         <p>Our mission is to make English learning fun and effective for everyone.</p>
+        <div class="about-us-content">
+            <div class="about-us-text">
+                <p>Welcome to English Explorer, your friendly guide on the journey to mastering the English language! We believe that learning a new language should be an exciting adventure, not a tedious task. That's why we've designed a platform that focuses on interactive, engaging, and easy-to-understand lessons tailored for beginners and young learners.</p>
+                <p>Our comprehensive approach covers essential vocabulary, foundational grammar rules, and practical sentence structures. With fun quizzes to test your knowledge and a clear, user-friendly interface, you'll build confidence step by step. Whether you're aiming to improve communication skills, boost your career prospects, or simply explore a richer understanding of different cultures, English Explorer is here to support you.</p>
+                <p>Join our growing community of learners and embark on your English learning adventure today. Let's make English exciting together!</p>
+            </div>
+            <div class="about-us-image">
+                <img src="include/img/aboutus.jpg" alt="About Us Illustration" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            </div>
+        </div>
     </section>
 
     <footer class="main-footer">
@@ -167,7 +172,7 @@
         <div>
             <h4>Quick Links</h4>
             <ul>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="#vocabulary-section">Vocabulary</a></li>
                 <li><a href="#grammar">Grammar</a></li>
                 <li><a href="#about-us">About Us</a></li>
@@ -182,6 +187,40 @@
     </footer>
 
     <script src="include/js/fetchdata.js"></script>
+    <script>
+        // JavaScript untuk smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // JavaScript untuk Hamburger Menu
+        const hamburgerMenu = document.getElementById('hamburgerMenu');
+        const mainNav = document.getElementById('mainNav');
+
+        hamburgerMenu.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            hamburgerMenu.classList.toggle('open'); // Untuk animasi hamburger (optional)
+        });
+
+        // Menutup menu saat link diklik (opsional, untuk UX mobile)
+        document.querySelectorAll('.main-nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('active');
+                hamburgerMenu.classList.remove('open');
+            });
+        });
+    </script>
 
 </body>
 </html>

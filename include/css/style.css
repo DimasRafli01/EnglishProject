@@ -1,6 +1,122 @@
+/* --- General Styles --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.section {
+    padding: 80px 50px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.section:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #007bff;
+    font-weight: 700;
+}
+
+/* --- Header Styles --- */
+.main-header {
+    background-color: #f8f8f8;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header .logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.main-header .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 30px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: #007bff;
+}
+
+/* --- Hamburger Menu Icon (Desktop: Hidden) --- */
+.hamburger-menu {
+    display: none; /* Hidden by default on desktop */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1001; /* Above navigation when active */
+}
+
+.hamburger-menu .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* --- Button Styles --- */
+.btn-primary {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
 .btn-secondary {
     display: inline-block;
     background-color: #6c757d;
+    color: white;
     padding: 15px 30px;
     border-radius: 50px;
     text-decoration: none;
@@ -15,10 +131,20 @@
     border-color: #5a6268;
 }
 
-/* .btn-secondary:hover {
-    background-color: white;
-    color: #6c757d;
-} */
+.btn-quiz {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-left: 20px;
+}
+
+.btn-quiz:hover {
+    background-color: #4cae4c;
+}
 
 .back-to-home-btn {
     display: inline-block;
@@ -37,103 +163,23 @@
     color: white;
 }
 
-.main-header {
-    background-color: #f8f8f8;
-    /* Warna latar belakang header */
-    padding: 15px 50px;
-    /* Padding di bagian atas dan samping */
-    display: flex;
-    justify-content: space-between;
-    /* Menjauhkan logo dan nav */
-    align-items: center;
-    /* Pusatkan secara vertikal */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    /* Bayangan sedikit di bawah header */
-    position: sticky;
-    /* Agar header tetap di atas saat di-scroll */
-    top: 0;
-    z-index: 1000;
-    /* Pastikan di atas elemen lain */
-}
-
-.main-header .logo {
-    font-size: 1.8em;
-    font-weight: 700;
-    color: #333;
-    text-decoration: none;
-    display: flex;
-    /* Untuk menempatkan ikon/teks logo secara horizontal */
-    align-items: center;
-}
-
-.main-header .logo img {
-    height: 40px;
-    /* Ukuran logo */
-    margin-right: 10px;
-}
-
-.main-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    /* Untuk item menu horizontal */
-}
-
-.main-nav ul li {
-    margin-left: 30px;
-    /* Jarak antar item menu */
-}
-
-.main-nav ul li a {
-    text-decoration: none;
-    color: #555;
-    font-weight: 600;
-    font-size: 1.1em;
-    transition: color 0.3s ease;
-}
-
-.main-nav ul li a:hover {
-    color: #007bff;
-    /* Warna hover */
-}
-
-.btn-quiz {
-    background-color: #5cb85c;
-    /* Warna hijau khas tombol Quiz */
-    color: white;
-    padding: 10px 25px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-    margin-left: 20px;
-    /* Jarak dari menu nav */
-}
-
-.btn-quiz:hover {
-    background-color: #4cae4c;
-}
-
-/* Hero section dari desain landing page sebelumnya */
+/* --- Hero Section Styles --- */
 .hero-section {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/hero1.jpg');
     background-size: cover;
     background-position: center;
     color: white;
     text-align: left;
-    /* Sesuaikan dengan desain gambar */
     padding: 150px 50px;
-    /* Padding untuk konten hero */
     height: 600px;
-    /* Tinggi hero section */
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .hero-content {
     max-width: 600px;
-    /* Batasi lebar teks hero */
+    z-index: 1;
 }
 
 .hero-content h1 {
@@ -150,7 +196,6 @@
 .hero-content .btn-signup {
     display: inline-block;
     background-color: #f7931e;
-    /* Warna oranye */
     color: white;
     padding: 15px 40px;
     border-radius: 5px;
@@ -164,77 +209,245 @@
     background-color: #e08010;
 }
 
-/* Penyesuaian untuk section di bawah hero */
-.features-section {
-    padding: 80px 50px; /* Sesuaikan padding */
-    max-width: 1200px; /* Batasi lebar konten */
-    margin: 0 auto; /* Pusatkan */
-    display: flex; /* Untuk layout flexbox */
-    justify-content: space-between; /* Menjauhkan teks dan gambar */
-    align-items: center; /* Pusatkan secara vertikal */
-    flex-wrap: wrap; /* Agar responsif */
-    background-color: white; /* Latar belakang putih */
+/* --- Vocabulary Section Styles --- */
+.vocabulary-section {
+    padding: 80px 50px;
+    text-align: center;
+    background-color: #eef7f6;
 }
 
-.features-text {
-    flex: 1; /* Ambil ruang yang tersedia */
-    min-width: 300px; /* Lebar minimum agar tidak terlalu kecil */
-    margin-right: 50px; /* Jarak antara teks dan gambar */
+.vocabulary-section h2 {
+    font-size: 2.5em;
+    color: #007bff;
+    margin-bottom: 40px;
+    font-weight: 700;
 }
 
-.features-text ul {
-    list-style: none; /* Hapus bullet default */
-    padding: 0;
+.vocabulary-table-container {
+    max-width: 900px;
+    margin: 0 auto;
+    overflow-x: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: white;
+}
+
+.vocabulary-table {
+    width: 100%;
+    border-collapse: collapse;
     margin: 0;
+    text-align: left;
 }
 
-.features-text ul li {
-    font-size: 1.3em;
-    margin-bottom: 20px;
-    position: relative;
-    padding-left: 30px; /* Ruang untuk ikon bullet kustom */
+.vocabulary-table th,
+.vocabulary-table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap;
 }
 
-.features-text ul li::before {
-    content: '•'; /* Menggunakan bullet kustom */
-    color: #007bff; /* Warna bullet biru */
-    position: absolute;
-    left: 0;
-    font-size: 1.5em; /* Ukuran bullet */
-    line-height: 1;
+.vocabulary-table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
-.features-image {
-    flex: 1;
-    min-width: 400px; /* Lebar minimum untuk gambar */
+.vocabulary-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.vocabulary-table tbody tr:hover {
+    background-color: #e6f2ff;
+}
+
+.vocabulary-table td p {
+    margin: 0;
+    font-size: 1em;
+    white-space: normal;
+}
+
+.vocabulary-table td p.example {
+    font-weight: bold;
+    color: #000000;
+    margin-top: 5px;
+}
+
+/* --- Pagination Styles --- */
+.pagination-controls {
+    margin-top: 30px;
     text-align: center;
 }
 
-.features-image img {
-    max-width: 100%; /* Pastikan gambar responsif */
+.pagination-controls button,
+.pagination-controls .page-number,
+.pagination-controls .ellipsis {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.pagination-controls button:hover:not(:disabled),
+.pagination-controls .page-number:hover:not(.active) {
+    background-color: #0056b3;
+}
+
+.pagination-controls button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.pagination-controls .page-number.active {
+    background-color: #0056b3;
+    font-weight: 700;
+    cursor: default;
+}
+
+.pagination-controls .ellipsis {
+    background-color: transparent;
+    color: #555;
+    cursor: default;
+    box-shadow: none;
+}
+
+/* --- Grammar Section Styles --- */
+#grammar {
+    background-color: #f9f9f9;
+    padding: 80px 50px;
+}
+
+#grammar .section-content {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+#grammar .grammar-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    text-align: left;
+    flex: 1 1 300px;
+}
+
+#grammar .grammar-card h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#grammar .grammar-card p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+#grammar .grammar-card p.example {
+    font-style: italic;
+    color: #4CAF50;
+    margin-top: 5px;
+}
+
+/* --- Pronoun Table Styles --- */
+.pronoun-table-container {
+    max-width: 700px;
+    margin: 60px auto 20px auto;
+    overflow-x: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: white;
+}
+
+.pronoun-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.pronoun-table th,
+.pronoun-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    white-space: nowrap;
+}
+
+.pronoun-table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85em;
+}
+
+.pronoun-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.pronoun-table tbody tr:hover {
+    background-color: #e6f2ff;
+}
+
+/* --- About Us Section Styles --- */
+#about-us {
+    background-color: #eef7f6;
+    padding: 80px 50px;
+}
+
+.about-us-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.about-us-text {
+    flex: 2;
+    min-width: 300px;
+}
+
+.about-us-text p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: #444;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.about-us-image {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+.about-us-image img {
+    max-width: 100%;
     height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* ... (Media queries untuk responsivitas di bagian bawah file CSS Anda) ... */
-@media (max-width: 768px) {
-    /* ... (Aturan media query yang sudah ada) ... */
-
-    .features-section {
-        flex-direction: column; /* Ubah ke kolom di layar kecil */
-        padding: 40px 20px;
-    }
-    .features-text, .features-image {
-        margin-right: 0; /* Hapus margin kanan */
-        min-width: unset;
-        width: 100%; /* Lebar penuh */
-        margin-bottom: 30px; /* Jarak antar elemen */
-    }
-}
-
-/* CSS untuk footer (jika perlu) */
+/* --- Footer Styles --- */
 .main-footer {
     background-color: #2c3e50;
-    /* Warna gelap untuk footer */
     color: white;
     padding: 40px 50px;
     display: flex;
@@ -245,6 +458,7 @@
 
 .main-footer div {
     margin: 10px 20px;
+    flex: 1 1 200px;
 }
 
 .main-footer h4 {
@@ -279,241 +493,146 @@
     text-decoration: none;
 }
 
-/* Media queries untuk responsivitas */
+
+/* --- Media Queries for Responsive Design --- */
 @media (max-width: 768px) {
+    /* Header Mobile */
     .main-header {
-        flex-direction: column;
+        flex-direction: row; /* Kembali ke row untuk menempatkan logo dan hamburger */
+        align-items: center;
+        justify-content: space-between; /* Logo kiri, hamburger kanan */
         padding: 15px 20px;
+    }
+
+    .main-nav {
+        /* Default: Hidden on mobile */
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        position: absolute; /* Posisikan menu di bawah header */
+        top: 70px; /* Sesuaikan dengan tinggi header */
+        left: 0;
+        background-color: #f8f8f8; /* Latar belakang menu mobile */
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        padding: 20px 0;
+        transition: transform 0.3s ease-in-out;
+        transform: translateY(-100%); /* Sembunyikan ke atas */
+    }
+
+    .main-nav.active {
+        display: flex; /* Show when active */
+        transform: translateY(0); /* Geser ke bawah */
     }
 
     .main-nav ul {
         flex-direction: column;
-        margin-top: 15px;
+        width: 100%;
+        text-align: center;
     }
 
     .main-nav ul li {
-        margin: 10px 0;
+        margin: 0;
+        padding: 10px 0;
     }
 
-    .btn-quiz {
-        margin-top: 15px;
-        margin-left: 0;
-        width: 100%;
-        text-align: center;
+    .main-nav ul li a {
+        display: block;
+        padding: 10px 0;
+        font-size: 1.2em;
     }
 
+    .hamburger-menu {
+        display: flex; /* Show hamburger on mobile */
+    }
+
+    /* Hero Section Mobile */
     .hero-section {
-        padding: 100px 20px;
+        padding: 80px 20px;
         text-align: center;
+        height: auto;
     }
-
     .hero-content {
         max-width: 100%;
     }
-
     .hero-content h1 {
-        font-size: 2.5em;
+        font-size: 2.2em;
+        margin-bottom: 15px;
+    }
+    .hero-content .btn-signup {
+        width: 100%;
+        box-sizing: border-box;
     }
 
-    .hero-content p {
-        font-size: 1.1em;
-    }
-
-    .features-section {
-        flex-direction: column;
+    /* Other Sections Mobile */
+    .section {
         padding: 40px 20px;
     }
-
-    .features-text,
-    .features-image {
+    h2 {
+        font-size: 2em;
+    }
+    .features-section, .about-us-content, .main-footer {
+        flex-direction: column;
+        padding: 30px 20px;
+        text-align: center;
+    }
+    .features-text ul li {
+        text-align: left;
+        padding-left: 30px;
+    }
+    .features-text, .features-image, .about-us-text, .about-us-image, .main-footer div {
+        margin-bottom: 20px;
         margin-right: 0;
         min-width: unset;
         width: 100%;
-        margin-bottom: 30px;
     }
-
-    .main-footer {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px 20px;
-    }
-
     .main-footer div {
-        margin-bottom: 20px;
+        margin: 10px 0;
     }
-}
+    .main-footer .social-links {
+        text-align: center;
+    }
 
-.vocabulary-section {
-    padding: 80px 20px;
-    text-align: center;
-    background-color: #eef7f6;
-}
-
-.vocabulary-section h2 {
-    font-size: 2.5em;
-    color: #007bff;
-    margin-bottom: 40px;
-    font-weight: 700;
-}
-
-.vocabulary-table-container {
-    max-width: 900px;
-    /* Batasi lebar tabel */
-    margin: 0 auto;
-    overflow-x: auto;
-    /* Agar tabel bisa discroll horizontal di layar kecil */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    background-color: white;
-}
-
-.vocabulary-table {
-    width: 100%;
-    border-collapse: collapse;
-    /* Menghilangkan spasi antar sel */
-    margin: 0;
-    text-align: left;
-}
-
-.vocabulary-table th,
-.vocabulary-table td {
-    padding: 15px 20px;
-    border-bottom: 1px solid #ddd;
-}
-
-.vocabulary-table th {
-    background-color: #007bff;
-    color: white;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.9em;
-    position: sticky;
-    /* Membuat header tabel lengket saat di-scroll */
-    top: 0;
-    z-index: 1;
-}
-
-.vocabulary-table tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
-    /* Warna latar belakang bergantian */
-}
-
-.vocabulary-table tbody tr:hover {
-    background-color: #e6f2ff;
-    /* Warna saat di-hover */
-}
-
-.vocabulary-table td p {
-    margin: 0;
-    font-size: 1em;
-}
-
-.vocabulary-table td p.example {
-    font-style: bold;
-    color: #000000;
-    margin-top: 5px;
-}
-
-/* Responsifitas untuk tabel */
-@media (max-width: 768px) {
-    .vocabulary-table-container {
-        width: 100%;
+    /* Table Responsiveness */
+    .vocabulary-table-container, .pronoun-table-container {
         border-radius: 0;
-        /* Hilangkan radius di layar kecil agar pas */
+        box-shadow: none;
+    }
+    .vocabulary-table th, .vocabulary-table td, .pronoun-table th, .pronoun-table td {
+        font-size: 0.8em;
+        padding: 10px;
+    }
+    .pagination-controls button, .pagination-controls .page-number, .pagination-controls .ellipsis {
+        font-size: 0.9em;
+        padding: 8px 12px;
+        margin: 0 3px;
     }
 }
 
-/* CSS untuk Pagination */
-.pagination-controls {
-    margin-top: 30px;
-    text-align: center;
-}
-
-.pagination-controls button,
-.pagination-controls .page-number,
-.pagination-controls .ellipsis {
-    /* Menambahkan gaya untuk nomor halaman dan ellipsis */
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    margin: 0 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
-    display: inline-block;
-    /* Agar semua elemen sejajar */
-    text-decoration: none;
-    /* Untuk kasus a.page-number */
-}
-
-.pagination-controls button:hover:not(:disabled),
-.pagination-controls .page-number:hover:not(.active) {
-    background-color: #0056b3;
-}
-
-.pagination-controls button:disabled {
-    background-color: #cccccc;
-    cursor: not-allowed;
-}
-
-.pagination-controls .page-number.active {
-    /* Gaya untuk halaman yang aktif */
-    background-color: #0056b3;
-    /* Warna lebih gelap untuk halaman aktif */
-    font-weight: 700;
-    cursor: default;
-}
-
-.pagination-controls .ellipsis {
-    background-color: transparent;
-    /* Transparan untuk titik-titik */
-    color: #555;
-    /* Warna teks titik-titik */
-    cursor: default;
-}
-
-/* --- Pronoun Table Styles (Tambahkan ini jika belum ada atau periksa kembali) --- */
-.pronoun-table-container {
-    max-width: 700px; /* Batasi lebar tabel pronoun */
-    margin: 40px auto 20px auto; /* Margin atas, bawah, dan pusatkan */
-    overflow-x: auto; /* Scroll horizontal jika tabel terlalu lebar di layar kecil */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    background-color: white; /* Latar belakang putih untuk container */
-}
-
-.pronoun-table {
-    width: 100%;
-    border-collapse: collapse; /* Menghilangkan spasi antar sel */
-    text-align: center; /* Rata tengah isi tabel */
-}
-
-.pronoun-table th, .pronoun-table td {
-    padding: 12px 15px; /* Padding di dalam sel */
-    border: 1px solid #ddd; /* Border sel */
-}
-
-.pronoun-table th {
-    background-color: #007bff; /* Warna latar belakang header tabel */
-    color: white;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.85em;
-}
-
-.pronoun-table tbody tr:nth-child(even) {
-    background-color: #f2f2f2; /* Warna latar belakang bergantian untuk baris genap */
-}
-
-.pronoun-table tbody tr:hover {
-    background-color: #e6f2ff; /* Warna saat di-hover */
-}
-
-/* Responsifitas untuk tabel pronoun */
-@media (max-width: 600px) {
-    .pronoun-table-container {
-        border-radius: 0;
+@media (max-width: 480px) {
+    .main-header .logo {
+        font-size: 1.5em;
     }
+    .main-nav ul li a {
+        font-size: 1em;
+    }
+    .hero-content h1 {
+        font-size: 1.8em;
+    }
+    .features-text ul li {
+        font-size: 1.1em;
+    }
+    .about-us-text p {
+        font-size: 1em;
+    }
+}
+
+/* Optional: Hamburger Animation (Add to .hamburger-menu.open) */
+.hamburger-menu.open .bar:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+}
+.hamburger-menu.open .bar:nth-child(2) {
+    opacity: 0;
+}
+.hamburger-menu.open .bar:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
 }
