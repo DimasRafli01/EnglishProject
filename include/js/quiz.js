@@ -1,9 +1,7 @@
-// quiz.js
+const MAX_QUESTIONS = 10;
 
-const MAX_QUESTIONS = 10; // Batas maksimum soal yang akan ditampilkan
-
-let questions = []; // Akan diisi dari file JSON (setelah di-shuffle dan dibatasi)
-let allQuestions = []; // Untuk menyimpan semua pertanyaan dari JSON
+let questions = [];
+let allQuestions = [];
 let currentQuestionIndex = 0;
 let userAnswers = [];
 let score = 0;
@@ -18,7 +16,6 @@ const scoreDisplay = document.getElementById('scoreDisplay');
 const totalQuestionsDisplay = document.getElementById('totalQuestionsDisplay');
 const feedbackMessage = document.getElementById('feedbackMessage');
 
-// --- Fungsi untuk mengacak array (Fisher-Yates shuffle) ---
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -44,17 +41,13 @@ async function loadQuestions() {
             return;
         }
 
-        // Acak semua pertanyaan
-        const shuffledQuestions = shuffleArray([...allQuestions]); // Buat salinan agar array asli tidak berubah
-
-        // Ambil hanya MAX_QUESTIONS soal pertama
+        const shuffledQuestions = shuffleArray([...allQuestions]);
         questions = shuffledQuestions.slice(0, MAX_QUESTIONS);
 
-        // Inisialisasi userAnswers dan perbarui tampilan total pertanyaan
         userAnswers = new Array(questions.length).fill(null);
         totalQuestionsDisplay.textContent = questions.length;
 
-        loadQuestion(); // Muat pertanyaan pertama setelah berhasil mengambil data
+        loadQuestion();
     } catch (error) {
         console.error('Error loading questions:', error);
         questionSection.innerHTML = "<p>Gagal memuat kuis. Silakan coba lagi nanti.</p>";
@@ -64,8 +57,6 @@ async function loadQuestions() {
         progressBar.parentNode.style.display = 'none';
     }
 }
-// --- Akhir Fungsi Memuat Pertanyaan ---
-
 
 function loadQuestion() {
     const q = questions[currentQuestionIndex];
@@ -79,7 +70,6 @@ function loadQuestion() {
         </ul>
     `;
 
-    // Tandai pilihan yang sudah dipilih sebelumnya
     const selectedAnswerIndex = userAnswers[currentQuestionIndex];
     if (selectedAnswerIndex !== null) {
         const buttons = questionSection.querySelectorAll('.option-button');
@@ -151,7 +141,6 @@ function showResults() {
     }
 }
 
-// Event Listeners
 prevBtn.addEventListener('click', () => {
     if (currentQuestionIndex > 0) {
         currentQuestionIndex--;
@@ -185,7 +174,6 @@ submitBtn.addEventListener('click', () => {
     showResults();
 });
 
-// Fungsi untuk Custom Alert (pengganti alert())
 function showCustomAlert(message) {
     const alertBox = document.createElement('div');
     alertBox.style.cssText = `
@@ -219,7 +207,6 @@ function showCustomAlert(message) {
             100% { opacity: 0; }
         }
     `;
-    // Hanya tambahkan keyframes jika belum ada untuk menghindari duplikasi
     if (![...styleSheet.cssRules].some(rule => rule.name === 'fadeOut')) {
         styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
     }
