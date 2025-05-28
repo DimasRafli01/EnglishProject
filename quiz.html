@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Language Quiz</title>
+    <link rel="stylesheet" href="include/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f7f6;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+           
+            min-height: 100vh;
+            padding-top: 50px;
+        }
+
+        .quiz-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 700px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .quiz-container h1 {
+            font-size: 2.5em;
+            color: #007bff;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .question-section {
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .question-section h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .options-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .options-list li {
+            margin-bottom: 15px;
+        }
+
+        .option-button {
+            display: block;
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            background-color: #f0f0f0;
+            font-size: 1.1em;
+            cursor: pointer;
+            text-align: left;
+            transition: all 0.3s ease;
+        }
+
+        .option-button:hover {
+            background-color: #e0e0e0;
+            border-color: #007bff;
+        }
+
+        .option-button.selected {
+            /* Kelas saat opsi dipilih */
+            background-color: #e6f2ff;
+            border-color: #007bff;
+            font-weight: 600;
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .nav-btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-btn.prev {
+            background-color: #6c757d;
+            color: white;
+        }
+
+        .nav-btn.prev:hover {
+            background-color: #5a6268;
+        }
+
+        .nav-btn.next,
+        .nav-btn.submit {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .nav-btn.next:hover,
+        .nav-btn.submit:hover {
+            background-color: #0056b3;
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            height: 10px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background-color: #28a745;
+            border-radius: 5px;
+            transition: width 0.3s ease-in-out;
+        }
+
+        .quiz-results {
+            margin-top: 40px;
+            display: none;
+        }
+
+        .quiz-results h2 {
+            color: #28a745;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .quiz-results p {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="quiz-container">
+        <p style="text-align: left; margin-bottom: 20px;">
+            <a href="index.html" class="back-to-home-btn">&lt; Back</a>
+        </p>
+        <h1>Quiz</h1>
+
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <div class="question-section" id="questionSection">
+            <h2>Lorem Ipsum</h2>
+            <ul class="options-list">
+                <li><button class="option-button" data-index="0">A. Lorem Ipsum</button></li>
+                <li><button class="option-button" data-index="1">B. Lorem Ipsum</button></li>
+                <li><button class="option-button" data-index="2">C. Lorem Ipsum</button></li>
+            </ul>
+        </div>
+
+        <div class="navigation-buttons">
+            <button class="nav-btn prev" id="prevBtn" style="display: none;">Previous</button>
+            <button class="nav-btn next" id="nextBtn">Next</button>
+            <button class="nav-btn submit" id="submitBtn" style="display: none;">End quiz</button>
+        </div>
+
+        <div class="quiz-results" id="quizResults">
+            <h2>Quiz done!</h2>
+            <p>Your Score: <span id="scoreDisplay">0</span> From <span id="totalQuestionsDisplay">0</span></p>
+            <p id="feedbackMessage"></p>
+            <button class="nav-btn next" onclick="location.reload()">Try Again</button>
+        </div>
+    </div>
+
+    <script src="include/js/quiz.js"></script>
+</body>
+
+</html>

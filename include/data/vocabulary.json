@@ -1,0 +1,252 @@
+[
+    {
+      "word": "Hello",
+      "translation": "Halo",
+      "example": "Hello, how are you?"
+    },
+    {
+      "word": "Thank you",
+      "translation": "Terima kasih",
+      "example": "Thank you for your help."
+    },
+    {
+      "word": "Please",
+      "translation": "Tolong",
+      "example": "Please come in."
+    },
+    {
+      "word": "Sorry",
+      "translation": "Maaf",
+      "example": "I am so sorry."
+    },
+    {
+      "word": "Yes",
+      "translation": "Ya",
+      "example": "Yes, I agree."
+    },
+    {
+      "word": "No",
+      "translation": "Tidak",
+      "example": "No, thank you."
+    },
+    {
+      "word": "Good Morning",
+      "translation": "Selamat pagi",
+      "example": "Good Morning, everyone!"
+    },
+    {
+      "word": "Good Night",
+      "translation": "Selamat malam",
+      "example": "Good Night, sleep tight!"
+    },
+    {
+      "word": "Water",
+      "translation": "Air",
+      "example": "I need some water."
+    },
+    {
+      "word": "Food",
+      "translation": "Makanan",
+      "example": "This food is delicious."
+    },
+    {
+      "word": "Book",
+      "translation": "Buku",
+      "example": "I am reading a book."
+    },
+    {
+      "word": "House",
+      "translation": "Rumah",
+      "example": "This is my house."
+    },
+    {
+      "word": "Car",
+      "translation": "Mobil",
+      "example": "He drives a red car."
+    },
+    {
+      "word": "Tree",
+      "translation": "Pohon",
+      "example": "The tree is tall."
+    },
+    {
+      "word": "Cat",
+      "translation": "Kucing",
+      "example": "The cat is cute."
+    },
+    {
+      "word": "Dog",
+      "translation": "Anjing",
+      "example": "My dog barks loudly."
+    },
+    {
+      "word": "Bird",
+      "translation": "Burung",
+      "example": "A bird can fly high."
+    },
+    {
+      "word": "Fish",
+      "translation": "Ikan",
+      "example": "The fish swims in the water."
+    },
+    {
+      "word": "Apple",
+      "translation": "Apel",
+      "example": "I like to eat an apple."
+    },
+    {
+      "word": "Banana",
+      "translation": "Pisang",
+      "example": "Monkeys love bananas."
+    },
+    {
+      "word": "Orange",
+      "translation": "Jeruk",
+      "example": "This orange is sweet."
+    },
+    {
+      "word": "Milk",
+      "translation": "Susu",
+      "example": "Drink your milk."
+    },
+    {
+      "word": "Bread",
+      "translation": "Roti",
+      "example": "I eat bread for breakfast."
+    },
+    {
+      "word": "Chair",
+      "translation": "Kursi",
+      "example": "Please sit on the chair."
+    },
+    {
+      "word": "Table",
+      "translation": "Meja",
+      "example": "Put the book on the table."
+    },
+    {
+      "word": "Bed",
+      "translation": "Tempat tidur",
+      "example": "I sleep in my bed."
+    },
+    {
+      "word": "Door",
+      "translation": "Pintu",
+      "example": "Close the door, please."
+    },
+    {
+      "word": "Window",
+      "translation": "Jendela",
+      "example": "Open the window to get fresh air."
+    },
+    {
+      "word": "School",
+      "translation": "Sekolah",
+      "example": "I go to school every day."
+    },
+    {
+      "word": "Teacher",
+      "translation": "Guru",
+      "example": "My teacher is kind."
+    },
+    {
+      "word": "Student",
+      "translation": "Murid",
+      "example": "She is a good student."
+    },
+    {
+      "word": "Friend",
+      "translation": "Teman",
+      "example": "He is my best friend."
+    },
+    {
+      "word": "Family",
+      "translation": "Keluarga",
+      "example": "I love my family."
+    },
+    {
+      "word": "Father",
+      "translation": "Ayah",
+      "example": "My father works hard."
+    },
+    {
+      "word": "Mother",
+      "translation": "Ibu",
+      "example": "My mother cooks delicious food."
+    },
+    {
+      "word": "Brother",
+      "translation": "Saudara laki-laki",
+      "example": "He is my younger brother."
+    },
+    {
+      "word": "Sister",
+      "translation": "Saudara perempuan",
+      "example": "She is my older sister."
+    },
+    {
+      "word": "Happy",
+      "translation": "Bahagia",
+      "example": "I feel happy today."
+    },
+    {
+      "word": "Sad",
+      "translation": "Sedih",
+      "example": "He looks sad."
+    },
+    {
+      "word": "Big",
+      "translation": "Besar",
+      "example": "The elephant is big."
+    },
+    {
+      "word": "Small",
+      "translation": "Kecil",
+      "example": "The mouse is small."
+    },
+    {
+      "word": "Hot",
+      "translation": "Panas",
+      "example": "The sun is hot."
+    },
+    {
+      "word": "Cold",
+      "translation": "Dingin",
+      "example": "It is cold outside."
+    },
+    {
+      "word": "Day",
+      "translation": "Hari",
+      "example": "Today is a beautiful day."
+    },
+    {
+      "word": "Night",
+      "translation": "Malam",
+      "example": "The stars shine at night."
+    },
+    {
+      "word": "Sun",
+      "translation": "Matahari",
+      "example": "The sun gives us light."
+    },
+    {
+      "word": "Moon",
+      "translation": "Bulan",
+      "example": "The moon is bright tonight."
+    },
+    {
+      "word": "Star",
+      "translation": "Bintang",
+      "example": "I see a shining star."
+    },
+    {
+      "word": "Flower",
+      "translation": "Bunga",
+      "example": "This flower smells sweet."
+    },
+    {
+      "word": "Play",
+      "translation": "Bermain",
+      "example": "Let's go play outside."
+    }
+  ]

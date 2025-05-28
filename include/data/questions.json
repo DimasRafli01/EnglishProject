@@ -1,0 +1,252 @@
+[
+  {
+    "question": "Arti dari 'Good Morning' adalah:",
+    "options": ["Selamat malam", "Selamat pagi", "Sampai jumpa"],
+    "answer": 1
+  },
+  {
+    "question": "'Apple' artinya apa?",
+    "options": ["Pisang", "Apel", "Jeruk"],
+    "answer": 1
+  },
+  {
+    "question": "Dia adalah seorang guru",
+    "options": ["He is a teacher", "She is a student", "They are doctors"],
+    "answer": 0
+  },
+  {
+    "question": "They are a happy family",
+    "options": ["Mereka adalah keluarga yang bahagia", "Mereka punya keluarga besar", "Mereka adalah teman baik"],
+    "answer": 0
+  },
+  {
+    "question": "Which one is a vegetable?",
+    "options": ["Strawberry", "Carrot", "Mango"],
+    "answer": 1
+  },
+  {
+    "question": "Arti dari 'Thank you' adalah:",
+    "options": ["Sama-sama", "Terima kasih", "Maaf"],
+    "answer": 1
+  },
+  {
+    "question": "'Water' artinya apa?",
+    "options": ["Udara", "Air", "Batu"],
+    "answer": 1
+  },
+  {
+    "question": "Ini adalah buku saya",
+    "options": ["That is my pen", "This is my book", "He has a book"],
+    "answer": 1
+  },
+  {
+    "question": "I am eating bread",
+    "options": ["Saya sedang minum air", "Saya sedang makan roti", "Saya suka kue"],
+    "answer": 1
+  },
+  {
+    "question": "Which one is an animal?",
+    "options": ["Table", "Tree", "Lion"],
+    "answer": 2
+  },
+  {
+    "question": "Arti dari 'Please' adalah:",
+    "options": ["Tolong", "Terima kasih", "Tidak"],
+    "answer": 0
+  },
+  {
+    "question": "'House' artinya apa?",
+    "options": ["Mobil", "Rumah", "Pohon"],
+    "answer": 1
+  },
+  {
+    "question": "Kami sedang bermain",
+    "options": ["They are singing", "We are playing", "You are running"],
+    "answer": 1
+  },
+  {
+    "question": "She is listening to music",
+    "options": ["Dia sedang membaca buku", "Dia sedang mendengarkan musik", "Dia sedang berbicara"],
+    "answer": 1
+  },
+  {
+    "question": "Which one is a color?",
+    "options": ["Square", "Blue", "Circle"],
+    "answer": 1
+  },
+  {
+    "question": "Arti dari 'Good Night' adalah:",
+    "options": ["Selamat tidur", "Selamat siang", "Selamat sore"],
+    "answer": 0
+  },
+  {
+    "question": "'Cat' artinya apa?",
+    "options": ["Anjing", "Kucing", "Burung"],
+    "answer": 1
+  },
+  {
+    "question": "Dia punya sebuah mobil merah",
+    "options": ["He has a red car", "She drives a blue car", "They like fast cars"],
+    "answer": 0
+  },
+  {
+    "question": "We live in Jakarta",
+    "options": ["Kami tinggal di Surabaya", "Kami tinggal di Jakarta", "Kami pergi ke Bandung"],
+    "answer": 1
+  },
+  {
+    "question": "Which one is a body part?",
+    "options": ["Shoe", "Hand", "Shirt"],
+    "answer": 1
+  },
+  {
+    "question": "Arti dari 'Happy' adalah:",
+    "options": ["Sedih", "Marah", "Bahagia"],
+    "answer": 2
+  },
+  {
+    "question": "'Book' artinya apa?",
+    "options": ["Pulpen", "Buku", "Meja"],
+    "answer": 1
+  },
+  {
+    "question": "Mereka sedang belajar bahasa Inggris",
+    "options": ["He is learning to read", "They are studying English", "We are watching TV"],
+    "answer": 1
+  },
+  {
+    "question": "It is sunny today",
+    "options": ["Hari ini hujan", "Hari ini cerah", "Hari ini mendung"],
+    "answer": 1
+  },
+  {
+    "question": "Which one is a place?",
+    "options": ["Pencil", "Hospital", "Ruler"],
+    "answer": 1
+  },
+  {
+    "question": "Arti dari 'Cold' adalah:",
+    "options": ["Panas", "Dingin", "Hangat"],
+    "answer": 1
+  },
+  {
+    "question": "'Run' artinya apa?",
+    "options": ["Berjalan", "Lari", "Melompat"],
+    "answer": 1
+  },
+  {
+    "question": "Saya suka apel",
+    "options": ["I like bananas", "I like apples", "I eat oranges"],
+    "answer": 1
+  },
+  {
+    "question": "He has two brothers",
+    "options": ["Dia punya satu adik", "Dia punya dua kakak", "Dia punya dua saudara laki-laki"],
+    "answer": 2
+  },
+  {
+    "question": "Which one is a number?",
+    "options": ["Red", "Two", "Big"],
+    "answer": 1
+  },
+  {
+    "question": "Arti dari 'Family' adalah:",
+    "options": ["Teman", "Keluarga", "Tetangga"],
+    "answer": 1
+  },
+  {
+    "question": "'Chair' artinya apa?",
+    "options": ["Meja", "Kursi", "Lemari"],
+    "answer": 1
+  },
+  {
+    "question": "Kami pergi ke sekolah setiap hari",
+    "options": ["We go to the park daily", "We go to school every day", "They go to work"],
+    "answer": 1
+  },
+  {
+    "question": "She is reading a newspaper",
+    "options": ["Dia sedang menonton film", "Dia sedang membaca koran", "Dia sedang menulis surat"],
+    "answer": 1
+  },
+  {
+    "question": "Which one is a school supply?",
+    "options": ["Sofa", "Pencil", "Refrigerator"],
+    "answer": 1
+  },
+  {
+    "question": "Arti dari 'Brother' adalah:",
+    "options": ["Kakak perempuan", "Adik laki-laki", "Saudara perempuan"],
+    "answer": 1
+  },
+  {
+    "question": "'Sleep' artinya apa?",
+    "options": ["Makan", "Tidur", "Minum"],
+    "answer": 1
+  },
+  {
+    "question": "Dia sedang minum kopi",
+    "options": ["She is drinking tea", "He is drinking coffee", "They are eating dinner"],
+    "answer": 1
+  },
+  {
+    "question": "I have a new bicycle",
+    "options": ["Saya punya topi baru", "Saya punya sepeda baru", "Saya punya tas baru"],
+    "answer": 1
+  },
+  {
+    "question": "Which one is a feeling?",
+    "options": ["Tall", "Happy", "Fast"],
+    "answer": 1
+  },
+  {
+    "question": "Arti dari 'Eat' adalah:",
+    "options": ["Minum", "Makan", "Tidur"],
+    "answer": 1
+  },
+  {
+    "question": "'Sing' artinya apa?",
+    "options": ["Menari", "Bernyanyi", "Tertawa"],
+    "answer": 1
+  },
+  {
+    "question": "Ini adalah sebuah bola",
+    "options": ["This is a box", "This is a ball", "This is a table"],
+    "answer": 1
+  },
+  {
+    "question": "He likes to play football",
+    "options": ["Dia suka membaca buku", "Dia suka bermain sepak bola", "Dia suka berenang"],
+    "answer": 1
+  },
+  {
+    "question": "Which one is a part of a tree?",
+    "options": ["Wheel", "Leaf", "Door"],
+    "answer": 1
+  },
+  {
+    "question": "Arti dari 'Mother' adalah:",
+    "options": ["Ayah", "Ibu", "Paman"],
+    "answer": 1
+  },
+  {
+    "question": "'Jump' artinya apa?",
+    "options": ["Berlari", "Melompat", "Duduk"],
+    "answer": 1
+  },
+  {
+    "question": "Kami punya banyak teman",
+    "options": ["They have new toys", "We have many friends", "You have a big house"],
+    "answer": 1
+  },
+  {
+    "question": "She is wearing a blue dress",
+    "options": ["Dia memakai kemeja merah", "Dia memakai gaun biru", "Dia memakai celana hitam"],
+    "answer": 1
+  },
+  {
+    "question": "Which one is a type of weather?",
+    "options": ["Wind", "Chair", "Clock"],
+    "answer": 0
+  }
+]

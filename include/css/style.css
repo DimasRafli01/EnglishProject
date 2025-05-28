@@ -1,0 +1,519 @@
+.btn-secondary {
+    display: inline-block;
+    background-color: #6c757d;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    border: 2px solid #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #5a6268;
+}
+
+/* .btn-secondary:hover {
+    background-color: white;
+    color: #6c757d;
+} */
+
+.back-to-home-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: transparent;
+    color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+}
+
+.back-to-home-btn:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.main-header {
+    background-color: #f8f8f8;
+    /* Warna latar belakang header */
+    padding: 15px 50px;
+    /* Padding di bagian atas dan samping */
+    display: flex;
+    justify-content: space-between;
+    /* Menjauhkan logo dan nav */
+    align-items: center;
+    /* Pusatkan secara vertikal */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Bayangan sedikit di bawah header */
+    position: sticky;
+    /* Agar header tetap di atas saat di-scroll */
+    top: 0;
+    z-index: 1000;
+    /* Pastikan di atas elemen lain */
+}
+
+.main-header .logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    /* Untuk menempatkan ikon/teks logo secara horizontal */
+    align-items: center;
+}
+
+.main-header .logo img {
+    height: 40px;
+    /* Ukuran logo */
+    margin-right: 10px;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* Untuk item menu horizontal */
+}
+
+.main-nav ul li {
+    margin-left: 30px;
+    /* Jarak antar item menu */
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: #007bff;
+    /* Warna hover */
+}
+
+.btn-quiz {
+    background-color: #5cb85c;
+    /* Warna hijau khas tombol Quiz */
+    color: white;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-left: 20px;
+    /* Jarak dari menu nav */
+}
+
+.btn-quiz:hover {
+    background-color: #4cae4c;
+}
+
+/* Hero section dari desain landing page sebelumnya */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/hero1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: left;
+    /* Sesuaikan dengan desain gambar */
+    padding: 150px 50px;
+    /* Padding untuk konten hero */
+    height: 600px;
+    /* Tinggi hero section */
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 600px;
+    /* Batasi lebar teks hero */
+}
+
+.hero-content h1 {
+    font-size: 3.8em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+}
+
+.hero-content .btn-signup {
+    display: inline-block;
+    background-color: #f7931e;
+    /* Warna oranye */
+    color: white;
+    padding: 15px 40px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.hero-content .btn-signup:hover {
+    background-color: #e08010;
+}
+
+/* Penyesuaian untuk section di bawah hero */
+.features-section {
+    padding: 80px 50px; /* Sesuaikan padding */
+    max-width: 1200px; /* Batasi lebar konten */
+    margin: 0 auto; /* Pusatkan */
+    display: flex; /* Untuk layout flexbox */
+    justify-content: space-between; /* Menjauhkan teks dan gambar */
+    align-items: center; /* Pusatkan secara vertikal */
+    flex-wrap: wrap; /* Agar responsif */
+    background-color: white; /* Latar belakang putih */
+}
+
+.features-text {
+    flex: 1; /* Ambil ruang yang tersedia */
+    min-width: 300px; /* Lebar minimum agar tidak terlalu kecil */
+    margin-right: 50px; /* Jarak antara teks dan gambar */
+}
+
+.features-text ul {
+    list-style: none; /* Hapus bullet default */
+    padding: 0;
+    margin: 0;
+}
+
+.features-text ul li {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 30px; /* Ruang untuk ikon bullet kustom */
+}
+
+.features-text ul li::before {
+    content: '•'; /* Menggunakan bullet kustom */
+    color: #007bff; /* Warna bullet biru */
+    position: absolute;
+    left: 0;
+    font-size: 1.5em; /* Ukuran bullet */
+    line-height: 1;
+}
+
+.features-image {
+    flex: 1;
+    min-width: 400px; /* Lebar minimum untuk gambar */
+    text-align: center;
+}
+
+.features-image img {
+    max-width: 100%; /* Pastikan gambar responsif */
+    height: auto;
+}
+
+/* ... (Media queries untuk responsivitas di bagian bawah file CSS Anda) ... */
+@media (max-width: 768px) {
+    /* ... (Aturan media query yang sudah ada) ... */
+
+    .features-section {
+        flex-direction: column; /* Ubah ke kolom di layar kecil */
+        padding: 40px 20px;
+    }
+    .features-text, .features-image {
+        margin-right: 0; /* Hapus margin kanan */
+        min-width: unset;
+        width: 100%; /* Lebar penuh */
+        margin-bottom: 30px; /* Jarak antar elemen */
+    }
+}
+
+/* CSS untuk footer (jika perlu) */
+.main-footer {
+    background-color: #2c3e50;
+    /* Warna gelap untuk footer */
+    color: white;
+    padding: 40px 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 0.9em;
+}
+
+.main-footer div {
+    margin: 10px 20px;
+}
+
+.main-footer h4 {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.main-footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.main-footer ul li {
+    margin-bottom: 8px;
+}
+
+.main-footer ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.main-footer ul li a:hover {
+    color: #007bff;
+}
+
+.main-footer .social-links a {
+    display: inline-block;
+    margin-right: 15px;
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+/* Media queries untuk responsivitas */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        margin-top: 15px;
+    }
+
+    .main-nav ul li {
+        margin: 10px 0;
+    }
+
+    .btn-quiz {
+        margin-top: 15px;
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-section {
+        padding: 100px 20px;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 1.1em;
+    }
+
+    .features-section {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    .features-text,
+    .features-image {
+        margin-right: 0;
+        min-width: unset;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .main-footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .main-footer div {
+        margin-bottom: 20px;
+    }
+}
+
+.vocabulary-section {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #eef7f6;
+}
+
+.vocabulary-section h2 {
+    font-size: 2.5em;
+    color: #007bff;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.vocabulary-table-container {
+    max-width: 900px;
+    /* Batasi lebar tabel */
+    margin: 0 auto;
+    overflow-x: auto;
+    /* Agar tabel bisa discroll horizontal di layar kecil */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: white;
+}
+
+.vocabulary-table {
+    width: 100%;
+    border-collapse: collapse;
+    /* Menghilangkan spasi antar sel */
+    margin: 0;
+    text-align: left;
+}
+
+.vocabulary-table th,
+.vocabulary-table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.vocabulary-table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    position: sticky;
+    /* Membuat header tabel lengket saat di-scroll */
+    top: 0;
+    z-index: 1;
+}
+
+.vocabulary-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+    /* Warna latar belakang bergantian */
+}
+
+.vocabulary-table tbody tr:hover {
+    background-color: #e6f2ff;
+    /* Warna saat di-hover */
+}
+
+.vocabulary-table td p {
+    margin: 0;
+    font-size: 1em;
+}
+
+.vocabulary-table td p.example {
+    font-style: bold;
+    color: #000000;
+    margin-top: 5px;
+}
+
+/* Responsifitas untuk tabel */
+@media (max-width: 768px) {
+    .vocabulary-table-container {
+        width: 100%;
+        border-radius: 0;
+        /* Hilangkan radius di layar kecil agar pas */
+    }
+}
+
+/* CSS untuk Pagination */
+.pagination-controls {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.pagination-controls button,
+.pagination-controls .page-number,
+.pagination-controls .ellipsis {
+    /* Menambahkan gaya untuk nomor halaman dan ellipsis */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    /* Agar semua elemen sejajar */
+    text-decoration: none;
+    /* Untuk kasus a.page-number */
+}
+
+.pagination-controls button:hover:not(:disabled),
+.pagination-controls .page-number:hover:not(.active) {
+    background-color: #0056b3;
+}
+
+.pagination-controls button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.pagination-controls .page-number.active {
+    /* Gaya untuk halaman yang aktif */
+    background-color: #0056b3;
+    /* Warna lebih gelap untuk halaman aktif */
+    font-weight: 700;
+    cursor: default;
+}
+
+.pagination-controls .ellipsis {
+    background-color: transparent;
+    /* Transparan untuk titik-titik */
+    color: #555;
+    /* Warna teks titik-titik */
+    cursor: default;
+}
+
+/* --- Pronoun Table Styles (Tambahkan ini jika belum ada atau periksa kembali) --- */
+.pronoun-table-container {
+    max-width: 700px; /* Batasi lebar tabel pronoun */
+    margin: 40px auto 20px auto; /* Margin atas, bawah, dan pusatkan */
+    overflow-x: auto; /* Scroll horizontal jika tabel terlalu lebar di layar kecil */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: white; /* Latar belakang putih untuk container */
+}
+
+.pronoun-table {
+    width: 100%;
+    border-collapse: collapse; /* Menghilangkan spasi antar sel */
+    text-align: center; /* Rata tengah isi tabel */
+}
+
+.pronoun-table th, .pronoun-table td {
+    padding: 12px 15px; /* Padding di dalam sel */
+    border: 1px solid #ddd; /* Border sel */
+}
+
+.pronoun-table th {
+    background-color: #007bff; /* Warna latar belakang header tabel */
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85em;
+}
+
+.pronoun-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Warna latar belakang bergantian untuk baris genap */
+}
+
+.pronoun-table tbody tr:hover {
+    background-color: #e6f2ff; /* Warna saat di-hover */
+}
+
+/* Responsifitas untuk tabel pronoun */
+@media (max-width: 600px) {
+    .pronoun-table-container {
+        border-radius: 0;
+    }
+}
