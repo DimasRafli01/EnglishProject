@@ -454,6 +454,8 @@ h2 {
     justify-content: space-between;
     flex-wrap: wrap;
     font-size: 0.9em;
+    position: relative;
+    padding-bottom: 70px;
 }
 
 .main-footer div {
@@ -491,6 +493,18 @@ h2 {
     color: white;
     font-size: 1.5em;
     text-decoration: none;
+}
+
+.copyright-text {
+    width: 100%;
+    text-align: center;
+    color: #aaa; /* Warna abu-abu terang */
+    font-size: 0.8em;
+    margin-top: 30px; /* Jarak dari konten footer di atasnya */
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
 }
 
 
@@ -590,6 +604,11 @@ h2 {
     }
     .main-footer .social-links {
         text-align: center;
+    }
+    .copyright-text {
+        position: static;
+        margin-top: 20px;
+        bottom: unset;
     }
 
     /* Table Responsiveness */

@@ -181,14 +181,16 @@
         </div>
         <div>
             <h4>Contact Us</h4>
-            <p>Email: info@englishlearning.com</p>
-            <p>Phone: +62 123 456 789</p>
+            <p>Email: Maseee@englearning.com</p>
+            <p>Phone: +62812 3456 7890</p>
+        </div>
+        <div class="copyright-text">
+            <p>Copyright &copy; 2025 Muhammad Dimas Rafli. All rights reserved.</p>
         </div>
     </footer>
 
     <script src="include/js/fetchdata.js"></script>
     <script>
-        // JavaScript untuk smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -204,16 +206,14 @@
             });
         });
 
-        // JavaScript untuk Hamburger Menu
         const hamburgerMenu = document.getElementById('hamburgerMenu');
         const mainNav = document.getElementById('mainNav');
 
         hamburgerMenu.addEventListener('click', () => {
             mainNav.classList.toggle('active');
-            hamburgerMenu.classList.toggle('open'); // Untuk animasi hamburger (optional)
+            hamburgerMenu.classList.toggle('open');
         });
 
-        // Menutup menu saat link diklik (opsional, untuk UX mobile)
         document.querySelectorAll('.main-nav ul li a').forEach(link => {
             link.addEventListener('click', () => {
                 mainNav.classList.remove('active');
