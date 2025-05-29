@@ -198,7 +198,7 @@ nextBtn.addEventListener('click', () => {
 
 submitBtn.addEventListener('click', () => {
     if (userAnswers[currentQuestionIndex] === null) {
-        showCustomAlert("Please select an answer before finishing the quiz!");+
+        showCustomAlert("Please select an answer before finishing the quiz!");
         return;
     }
     showResults();
