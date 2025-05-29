@@ -244,7 +244,7 @@
     "options": ["Dia memakai kemeja merah", "Dia memakai gaun biru", "Dia memakai celana hitam"],
     "answer": 1
   },
-  {
+ {
     "question": "Which one is a type of weather?",
     "options": ["Wind", "Chair", "Clock"],
     "answer": 0
