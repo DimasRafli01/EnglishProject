@@ -67,20 +67,21 @@ async function loadQuestions() {
 
 function loadQuestion() {
     const q = questions[currentQuestionIndex];
+    const currentOptions = shuffledOptionsOrder[currentQuestionIndex];
+
     questionSection.innerHTML = `
         <h2>Question No. ${currentQuestionIndex + 1} : ${q.question}</h2>
-        ${q.audio ? `<button id="playAudioBtn" style="background: none; border: none; cursor: pointer;"><img src="https://img.icons8.com/ios-filled/50/000000/speaker.png" alt="Play Audio" width="30" height="30"></button>` : ''}
         <ul class="options-list">
-            ${q.options.map((option, index) => `
-                <li><button class="option-button" data-index="${index}">${option}</button></li>
+            ${currentOptions.map((optionText, shuffledIndex) => `
+                <li><button class="option-button" data-shuffled-index="${shuffledIndex}">${optionText}</button></li>
             `).join('')}
         </ul>
     `;
-
-    const selectedAnswerIndex = userAnswers[currentQuestionIndex];
-    if (selectedAnswerIndex !== null) {
+    
+    const selectedShuffledIndex = userAnswers[currentQuestionIndex];
+    if (selectedShuffledIndex !== null) {
         const buttons = questionSection.querySelectorAll('.option-button');
-        buttons[selectedAnswerIndex].classList.add('selected');
+        buttons[selectedShuffledIndex].classList.add('selected');
     }
 
     attachOptionListeners();
@@ -94,7 +95,7 @@ function attachOptionListeners() {
         button.addEventListener('click', function () {
             optionButtons.forEach(btn => btn.classList.remove('selected'));
             this.classList.add('selected');
-            userAnswers[currentQuestionIndex] = parseInt(this.dataset.index);
+            userAnswers[currentQuestionIndex] = parseInt(this.dataset.shuffledIndex);
         });
     });
 }
@@ -115,10 +116,19 @@ function updateProgressBar() {
 }
 
 function calculateScore() {
-    score = 0;
+   score = 0;
     for (let i = 0; i < questions.length; i++) {
-        if (userAnswers[i] !== null && userAnswers[i] === questions[i].answer) {
-            score++;
+        const question = questions[i];
+        const selectedShuffledIndex = userAnswers[i];
+        const optionsInOrder = shuffledOptionsOrder[i];
+        
+        if (selectedShuffledIndex !== null) {
+            const selectedAnswerText = optionsInOrder[selectedShuffledIndex];
+            const correctAnswerText = question.options[question.answer];
+
+            if (selectedAnswerText === correctAnswerText) {
+                score++;
+            }
         }
     }
     return score;
