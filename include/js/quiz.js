@@ -4,8 +4,11 @@ let questions = [];
 let allQuestions = [];
 let currentQuestionIndex = 0;
 let userAnswers = [];
+let shuffledOptionsOrder = [];
+
 let score = 0;
 
+// Mendapatkan elemen-elemen DOM
 const questionSection = document.getElementById('questionSection');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
@@ -16,6 +19,7 @@ const scoreDisplay = document.getElementById('scoreDisplay');
 const totalQuestionsDisplay = document.getElementById('totalQuestionsDisplay');
 const feedbackMessage = document.getElementById('feedbackMessage');
 
+// Fungsi untuk mengacak array
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -24,6 +28,7 @@ function shuffleArray(array) {
     return array;
 }
 
+// Fungsi utama untuk memuat pertanyaan dari JSON
 async function loadQuestions() {
     try {
         const response = await fetch('include/data/questions.json');
@@ -41,9 +46,11 @@ async function loadQuestions() {
             return;
         }
 
-        const shuffledQuestions = shuffleArray([...allQuestions]);
-        questions = shuffledQuestions.slice(0, MAX_QUESTIONS);
+        // 1. Acak urutan pertanyaan
+        const shuffledQuestionOrder = shuffleArray([...allQuestions]);
+        questions = shuffledQuestionOrder.slice(0, MAX_QUESTIONS);
 
+        // 2. Untuk setiap pertanyaan yang dipilih, acak juga urutan opsinya
         shuffledOptionsOrder = [];
         questions.forEach(q => {
             const originalOptions = [...q.options];
@@ -51,6 +58,7 @@ async function loadQuestions() {
             shuffledOptionsOrder.push(shuffled);
         });
 
+        // Inisialisasi array jawaban pengguna
         userAnswers = new Array(questions.length).fill(null);
         totalQuestionsDisplay.textContent = questions.length;
 
@@ -65,6 +73,7 @@ async function loadQuestions() {
     }
 }
 
+// Fungsi untuk menampilkan pertanyaan ke UI
 function loadQuestion() {
     const q = questions[currentQuestionIndex];
     const currentOptions = shuffledOptionsOrder[currentQuestionIndex];
@@ -77,7 +86,8 @@ function loadQuestion() {
             `).join('')}
         </ul>
     `;
-    
+
+    // Tandai pilihan yang sudah dipilih pengguna sebelumnya
     const selectedShuffledIndex = userAnswers[currentQuestionIndex];
     if (selectedShuffledIndex !== null) {
         const buttons = questionSection.querySelectorAll('.option-button');
@@ -89,6 +99,7 @@ function loadQuestion() {
     updateProgressBar();
 }
 
+// Fungsi untuk melampirkan event listener ke tombol pilihan jawaban
 function attachOptionListeners() {
     const optionButtons = questionSection.querySelectorAll('.option-button');
     optionButtons.forEach(button => {
@@ -115,13 +126,14 @@ function updateProgressBar() {
     progressBar.style.width = `${progress}%`;
 }
 
+// Fungsi untuk menghitung skor akhir
 function calculateScore() {
-   score = 0;
+    score = 0;
     for (let i = 0; i < questions.length; i++) {
         const question = questions[i];
         const selectedShuffledIndex = userAnswers[i];
         const optionsInOrder = shuffledOptionsOrder[i];
-        
+
         if (selectedShuffledIndex !== null) {
             const selectedAnswerText = optionsInOrder[selectedShuffledIndex];
             const correctAnswerText = question.options[question.answer];
@@ -158,6 +170,7 @@ function showResults() {
     }
 }
 
+// Event Listeners
 prevBtn.addEventListener('click', () => {
     if (currentQuestionIndex > 0) {
         currentQuestionIndex--;
@@ -167,7 +180,7 @@ prevBtn.addEventListener('click', () => {
 
 nextBtn.addEventListener('click', () => {
     if (userAnswers[currentQuestionIndex] === null && currentQuestionIndex < questions.length - 1) {
-        showCustomAlert("Mohon pilih jawaban terlebih dahulu!");
+        showCustomAlert("Please select an answer first!");
         return;
     }
 
@@ -176,7 +189,7 @@ nextBtn.addEventListener('click', () => {
         loadQuestion();
     } else {
         if (userAnswers[currentQuestionIndex] === null) {
-            showCustomAlert("Mohon pilih jawaban terlebih dahulu sebelum menyelesaikan kuis!");
+            showCustomAlert("Please select an answer before finishing the quiz!");
             return;
         }
         showResults();
@@ -185,12 +198,13 @@ nextBtn.addEventListener('click', () => {
 
 submitBtn.addEventListener('click', () => {
     if (userAnswers[currentQuestionIndex] === null) {
-        showCustomAlert("Mohon pilih jawaban terlebih dahulu sebelum menyelesaikan kuis!");
+        showCustomAlert("Please select an answer before finishing the quiz!");+
         return;
     }
     showResults();
 });
 
+// Fungsi untuk Custom Alert
 function showCustomAlert(message) {
     const alertBox = document.createElement('div');
     alertBox.style.cssText = `
@@ -198,14 +212,14 @@ function showCustomAlert(message) {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: #f44336; /* Merah */
+        background-color: #f44336;
         color: white;
         padding: 15px 25px;
         border-radius: 8px;
         box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         z-index: 1000;
         font-size: 1.1em;
-        animation: fadeOut 3s forwards; /* Animasi fade out */
+        animation: fadeOut 3s forwards;
     `;
     alertBox.textContent = message;
     document.body.appendChild(alertBox);
@@ -229,6 +243,4 @@ function showCustomAlert(message) {
     }
 }
 
-
-// Panggil fungsi loadQuestions saat halaman dimuat
 document.addEventListener('DOMContentLoaded', loadQuestions);
