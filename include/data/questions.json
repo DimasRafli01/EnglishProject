@@ -448,5 +448,455 @@
       "Clock"
     ],
     "answer": 0
+  },
+  {
+    "question": "This book is ___.",
+    "options": [
+      "my",
+      "mine",
+      "me"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The car is ___.",
+    "options": [
+      "their",
+      "theirs",
+      "them"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "That dog is ___.",
+    "options": [
+      "her",
+      "hers",
+      "she"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The ball belongs to ___.",
+    "options": [
+      "we",
+      "our",
+      "us"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Are these keys ___?",
+    "options": [
+      "your",
+      "you",
+      "yours"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "He gave the gift to ___.",
+    "options": [
+      "I",
+      "my",
+      "me"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "She baked a cake for ___.",
+    "options": [
+      "him",
+      "he",
+      "his"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The cat ate ___ food.",
+    "options": [
+      "it",
+      "its",
+      "it's"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "We bought tickets for ___.",
+    "options": [
+      "they",
+      "their",
+      "them"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "This idea is ___.",
+    "options": [
+      "our",
+      "we",
+      "ours"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Rearrange the letters to form a word: 't-e-a-r-w'",
+    "options": [
+      "water",
+      "tawer",
+      "watre"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Rearrange the letters to form a word: 'k-o-b-o'",
+    "options": [
+      "book",
+      "boko",
+      "koob"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Rearrange the letters to form a word: 'e-p-a-l-p'",
+    "options": [
+      "appel",
+      "apple",
+      "appli"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Rearrange the letters to form a word: 'u-s-e-o-h'",
+    "options": [
+      "house",
+      "houes",
+      "hoseu"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Rearrange the letters to form a word: 'd-r-a-b-e'",
+    "options": [
+      "baerd",
+      "bread",
+      "derba"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Rearrange the letters to form a word: 'c-a-t'",
+    "options": [
+      "act",
+      "cta",
+      "cat"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Rearrange the letters to form a word: 'g-o-d'",
+    "options": [
+      "dog",
+      "gdo",
+      "odg"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Rearrange the letters to form a word: 'd-i-r-b'",
+    "options": [
+      "brid",
+      "bird",
+      "rbid"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Rearrange the letters to form a word: 'm-l-i-k'",
+    "options": [
+      "kilm",
+      "milk",
+      "milc"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Rearrange the letters to form a word: 's-o-h-e-s'",
+    "options": [
+      "shoes",
+      "sheos",
+      "sohes"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "They ___ happy.",
+    "options": [
+      "is",
+      "am",
+      "are"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "She ___ a teacher.",
+    "options": [
+      "is",
+      "am",
+      "are"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "I ___ a student.",
+    "options": [
+      "am",
+      "is",
+      "are"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "He ___ to school every day.",
+    "options": [
+      "go",
+      "goes",
+      "going"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "We ___ English now.",
+    "options": [
+      "study",
+      "studies",
+      "are studying"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "The sun ___ in the east.",
+    "options": [
+      "rise",
+      "rises",
+      "rising"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Cats ___ milk.",
+    "options": [
+      "like",
+      "likes",
+      "liking"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Birds can ___.",
+    "options": [
+      "swim",
+      "fly",
+      "run"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "My mother ___ delicious food.",
+    "options": [
+      "cook",
+      "cooks",
+      "cooking"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "They ___ football every weekend.",
+    "options": [
+      "play",
+      "plays",
+      "playing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What is the opposite of 'hot'?",
+    "options": [
+      "warm",
+      "cold",
+      "big"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is the opposite of 'up'?",
+    "options": [
+      "over",
+      "down",
+      "in"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is the opposite of 'happy'?",
+    "options": [
+      "sad",
+      "glad",
+      "funny"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What is the opposite of 'big'?",
+    "options": [
+      "small",
+      "large",
+      "tall"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What is the opposite of 'open'?",
+    "options": [
+      "start",
+      "close",
+      "begin"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is the opposite of 'day'?",
+    "options": [
+      "morning",
+      "night",
+      "afternoon"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is the opposite of 'fast'?",
+    "options": [
+      "quick",
+      "slow",
+      "run"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is the opposite of 'inside'?",
+    "options": [
+      "in",
+      "out",
+      "on"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is the opposite of 'dirty'?",
+    "options": [
+      "messy",
+      "clean",
+      "dusty"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is the opposite of 'long'?",
+    "options": [
+      "short",
+      "tall",
+      "wide"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Who teaches students in a school?",
+    "options": [
+      "A doctor",
+      "A teacher",
+      "A chef"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What do you use to write?",
+    "options": [
+      "A spoon",
+      "A pencil",
+      "A fork"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Where do fish live?",
+    "options": [
+      "In the sky",
+      "In the water",
+      "On the tree"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Who helps sick people?",
+    "options": [
+      "A student",
+      "A doctor",
+      "A pilot"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What do you wear on your feet?",
+    "options": [
+      "A hat",
+      "Shoes",
+      "Gloves"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Where do you sleep?",
+    "options": [
+      "Kitchen",
+      "Bedroom",
+      "Bathroom"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What animal says 'moo'?",
+    "options": [
+      "A cat",
+      "A dog",
+      "A cow"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Who puts out fires?",
+    "options": [
+      "A police officer",
+      "A firefighter",
+      "A baker"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What time does the sun usually set?",
+    "options": [
+      "Morning",
+      "Noon",
+      "Evening"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Where do you eat dinner?",
+    "options": [
+      "Bedroom",
+      "Dining room",
+      "Bathroom"
+    ],
+    "answer": 1
   }
 ]
