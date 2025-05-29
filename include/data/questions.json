@@ -248,5 +248,55 @@
     "question": "Which one is a type of weather?",
     "options": ["Wind", "Chair", "Clock"],
     "answer": 0
+  },
+  {
+    "question": "This book is ___.",
+    "options": ["my", "mine", "me"],
+    "answer": 1
+  },
+  {
+    "question": "The car is ___.",
+    "options": ["their", "theirs", "them"],
+    "answer": 1
+  },
+  {
+    "question": "That dog is ___.",
+    "options": ["her", "hers", "she"],
+    "answer": 1
+  },
+  {
+    "question": "The ball belongs to ___.",
+    "options": ["we", "our", "us"],
+    "answer": 2
+  },
+  {
+    "question": "Are these keys ___?",
+    "options": ["your", "you", "yours"],
+    "answer": 2
+  },
+  {
+    "question": "He gave the gift to ___.",
+    "options": ["I", "my", "me"],
+    "answer": 2
+  },
+  {
+    "question": "She baked a cake for ___.",
+    "options": ["him", "he", "his"],
+    "answer": 0
+  },
+  {
+    "question": "The cat ate ___ food.",
+    "options": ["it", "its", "it's"],
+    "answer": 1
+  },
+  {
+    "question": "We bought tickets for ___.",
+    "options": ["they", "their", "them"],
+    "answer": 2
+  },
+  {
+    "question": "This idea is ___.",
+    "options": ["our", "we", "ours"],
+    "answer": 2
   }
 ]
