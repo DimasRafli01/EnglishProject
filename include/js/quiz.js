@@ -44,6 +44,13 @@ async function loadQuestions() {
         const shuffledQuestions = shuffleArray([...allQuestions]);
         questions = shuffledQuestions.slice(0, MAX_QUESTIONS);
 
+        shuffledOptionsOrder = [];
+        questions.forEach(q => {
+            const originalOptions = [...q.options];
+            const shuffled = shuffleArray(originalOptions);
+            shuffledOptionsOrder.push(shuffled);
+        });
+
         userAnswers = new Array(questions.length).fill(null);
         totalQuestionsDisplay.textContent = questions.length;
 
